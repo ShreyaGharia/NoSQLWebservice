@@ -1,0 +1,17 @@
+remoteApi\ProductRemoteApi.class
+exception\OtherResponse.class
+config\Authentication.class
+repository\ProductRepo.class
+repository\UserRepo.class
+repository\RolesRepo.class
+service\UserRoleService.class
+entity\Roles.class
+controller\ProductController.class
+entity\User.class
+entity\Product.class
+config\WebSecurity.class
+exception\ProductNotMatch.class
+exception\ProductNotFound.class
+service\ProductService.class
+MyRetailRunner.class
+service\DbInitilizatioService.class
