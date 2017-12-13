@@ -1,6 +1,7 @@
 package com.target.myRetail.entity;
 
 import org.springframework.data.annotation.Id;
+import org.springframework.data.annotation.Transient;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.util.Map;
@@ -12,15 +13,16 @@ import java.util.Map;
 public class Product {
     @Id
     public String productId;
-    @org.springframework.data.annotation.Transient
-    private String title;
-    private Map<String, String> price;
-    public Product(){}
+    @Transient
+    public String title;
+    public Map<String, String> current_price;
 
-    public Product(String productId, String title, Map<String, String> price ){
+    public Product() {}
+
+    public Product(String productId, String title, Map<String, String> current_price) {
         this.productId = productId;
         this.title = title;
-        this.price = price;
+        this.current_price = current_price;
     }
 
     public String getProductId() {
@@ -39,11 +41,12 @@ public class Product {
         this.title = title;
     }
 
-    public Map<String, String> getPrice() {
-        return price;
+    public Map<String, String> getCurrent_price() {
+        return current_price;
     }
 
-    public void setPrice(Map<String, String> price) {
-        this.price = price;
+    public void setCurrent_price(Map<String, String> current_price) {
+        this.current_price = current_price;
     }
+
 }

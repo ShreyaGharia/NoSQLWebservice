@@ -23,7 +23,6 @@ public class ProductController {
 
     @RequestMapping(value = "/{id}", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<Product> getProduct(@PathVariable("id") String productId) {
-
         Product product;
         try {
             product = productService.findProductById(productId);

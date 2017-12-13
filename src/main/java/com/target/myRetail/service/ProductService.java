@@ -21,6 +21,7 @@ public class ProductService {
 
     @Autowired
     private ProductRepo productRepo;
+    public ProductService(){}
 
     public Product findProductById(String productId) throws IOException {
         Product product = productRepo.getProductByProductId(productId);

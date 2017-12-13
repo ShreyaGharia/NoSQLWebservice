@@ -27,6 +27,7 @@ public class DbInitilizatioService {
     @Autowired
     private UserRepo userRepo;
 
+    public DbInitilizatioService(){}
     @PostConstruct
     public void init(){
         addProduct();

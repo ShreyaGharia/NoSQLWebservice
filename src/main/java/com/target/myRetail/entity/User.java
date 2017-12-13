@@ -17,9 +17,10 @@ public class User {
     private String username;
     private String password;
 
-    @DBRef
+    @DBRef(lazy = false)
     private List<Roles> rolesList;
 
+    public User(){}
     public User(String userId, String username, String password, List<Roles> rolesList) {
         this.userId = userId;
         this.username = username;
